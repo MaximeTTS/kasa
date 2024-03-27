@@ -1,17 +1,19 @@
 {
-  "name": "react-pokemons-app",
+  "name": "kasa",
   "version": "1.0.0",
-  "description": "An awesome application to handle some pokemons.",
+  "description": "Kasa is an apartment rental application for private individuals in France",
   "dependencies": {
-    "@types/node": "12.11.1",
-    "@types/react": "16.9.9",
-    "@types/react-dom": "16.9.2",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^12.11.1",
+    "@types/react": "^16.14.60",
+    "@types/react-dom": "^16.9.24",
     "@types/react-router-dom": "^5.1.2",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "^5.0.1",
-    "typescript": "3.6.4"
+    "sass": "^1.72.0",
+    "typescript": "^3.6.4"
   },
   "scripts": {
     "start": "react-scripts start",
