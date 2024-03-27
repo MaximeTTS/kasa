@@ -1,4 +1,5 @@
 import React, { FunctionComponent } from 'react'
+import '_App.scss'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 // Importe tes composants de page
 import Home from './pages/Home'
