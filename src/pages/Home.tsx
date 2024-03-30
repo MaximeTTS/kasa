@@ -1,7 +1,12 @@
 import React from 'react'
+import Banner from '../components/banner/Banner'
 
 const Home: React.FC = () => {
-  return <div>Contenu de la page d'accueil</div>
+  return (
+    <div>
+      <Banner />
+    </div>
+  )
 }
 
 export default Home

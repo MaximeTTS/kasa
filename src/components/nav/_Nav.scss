@@ -1,0 +1,17 @@
+.nav__header {
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 57px;
+
+    a {
+      text-decoration: none;
+      color: black;
+      font-size: 24px;
+
+      &.active {
+        border-bottom: 1px solid black;
+      }
+    }
+  }
+}
