@@ -3,9 +3,9 @@ import Banner from '../components/banner/Banner'
 
 const Home: React.FC = () => {
   return (
-    <div>
+    <main>
       <Banner />
-    </div>
+    </main>
   )
 }
 
