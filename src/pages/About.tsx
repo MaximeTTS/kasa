@@ -1,7 +1,14 @@
 import React from 'react'
+import BannerAbout from '../components/bannerAbout/BannerAbout'
+import AboutText from '../components/aboutText/AboutText'
 
 const About: React.FC = () => {
-  return <div>Contenu de la page d'accueil</div>
+  return (
+    <>
+      <BannerAbout />
+      <AboutText />
+    </>
+  )
 }
 
 export default About

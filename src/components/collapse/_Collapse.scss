@@ -1,0 +1,22 @@
+.collapse__container {
+  .collapse__button {
+    background-color: #ff5f5f;
+    color: white;
+    padding: 1em;
+    width: 100%;
+    border: none;
+    text-align: left;
+    position: relative;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 10px 20px 10px 15px;
+  }
+
+  .collapse__content {
+    padding: 1em;
+    background: var(--Gray, rgba(246, 246, 246, 0.45));
+    font-size: 19px;
+  }
+}
