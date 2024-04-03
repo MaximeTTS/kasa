@@ -15,8 +15,13 @@
   }
 
   .collapse__content {
-    padding: 1em;
-    background: var(--Gray, rgba(246, 246, 246, 0.45));
-    font-size: 19px;
+    padding: 0 1em;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, padding 0.5s ease;
+    &.open {
+      max-height: 20em;
+      padding: 1em;
+    }
   }
 }

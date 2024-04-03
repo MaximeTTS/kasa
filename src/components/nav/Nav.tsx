@@ -7,7 +7,7 @@ const Nav: React.FC = () => {
       <ul>
         <li>
           <NavLink to='/' end className={({ isActive }) => (isActive ? 'active' : undefined)}>
-            Acceuil
+            Accueil
           </NavLink>
         </li>
         <li>

@@ -17,7 +17,7 @@ const Collapse: React.FC<CollapseProps> = ({ title, content }) => {
         {title}
         <span className={`arrow ${isOpen ? 'up' : 'down'}`}></span>
       </button>
-      {isOpen && <div className='collapse__content'>{content}</div>}
+      <div className={`collapse__content ${isOpen ? 'open' : ''}`}>{content}</div>
     </div>
   )
 }
