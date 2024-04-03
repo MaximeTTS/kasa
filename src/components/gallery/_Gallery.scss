@@ -11,23 +11,33 @@
   background-color: #f6f6f6;
   max-width: 1240px;
 
-  @media (max-width: 1024px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-  }
-
+  /* Pour les écrans jusqu'à 479px de largeur */
   @media (max-width: 479px) {
     padding: 0;
     gap: 20px;
     background-color: #ffff;
   }
 
-  @media (max-width: 768px) {
+  /* Pour les écrans entre 480px et 767px de largeur */
+  @media (min-width: 480px) and (max-width: 767px) {
     padding: 0;
     gap: 20px;
     background-color: #ffff;
+  }
+
+  /* Pour les écrans entre 768px et 1023px de largeur */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    padding: 35px;
+    column-gap: 25px;
+    row-gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1024px) and (max-width: 1300px) {
+    padding: 30px;
+  }
+
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
   }
 }

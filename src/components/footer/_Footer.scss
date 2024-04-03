@@ -46,4 +46,14 @@
     padding: 66px 120.313px 58px 121.094px;
     text-align: center;
   }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    gap: 15px;
+    justify-content: flex-start;
+  }
+
+  @media (min-width: 1024px) and (max-width: 1300px) {
+    gap: 25px;
+    justify-content: flex-start;
+  }
 }
