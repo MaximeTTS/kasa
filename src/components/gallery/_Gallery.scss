@@ -24,4 +24,10 @@
     gap: 20px;
     background-color: #ffff;
   }
+
+  @media (max-width: 768px) {
+    padding: 0;
+    gap: 20px;
+    background-color: #ffff;
+  }
 }

@@ -24,9 +24,23 @@
       width: 133.594px;
       height: 46px;
     }
+
+    @media (max-width: 768px) {
+      font-size: 18px;
+      text-align: center;
+      width: 133.594px;
+      height: 46px;
+    }
   }
 
   @media (max-width: 479px) {
+    gap: 10px;
+    justify-content: flex-start;
+    padding: 66px 120.313px 58px 121.094px;
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
     gap: 10px;
     justify-content: flex-start;
     padding: 66px 120.313px 58px 121.094px;
