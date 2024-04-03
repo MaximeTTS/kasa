@@ -19,7 +19,10 @@
     bottom: 0;
     margin: 15px 20px;
     box-sizing: inherit;
-    color: #ffff;
+    color: #fff;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
   }
 
   .card__overlay {
@@ -30,5 +33,9 @@
     left: 0;
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0) 60%);
     border-radius: 10px; // Mettre le même border-radius que votre .card si nécessaire
+  }
+
+  @media (max-width: 479px) {
+    margin-bottom: 0;
   }
 }

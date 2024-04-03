@@ -7,7 +7,22 @@
   padding-bottom: 50px;
   max-width: 1240px;
 
+  @media (max-width: 479px) {
+    margin: 0;
+    padding: 0 20px;
+  }
+
   .logo__header {
     width: 10rem;
+  }
+
+  // Pour les très petits écrans, par exemple de moins de 480px de large
+  @media (max-width: 479px) {
+    padding-top: 20px;
+    padding-bottom: 27px;
+
+    .logo__header {
+      width: 8em;
+    }
   }
 }

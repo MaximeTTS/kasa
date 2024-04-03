@@ -10,12 +10,26 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
 
-.logo__footer {
-  max-width: 200px;
-}
+  .logo__footer {
+    max-width: 200px;
+  }
 
-.footer__span {
-  font-size: 24px;
+  .footer__span {
+    font-size: 24px;
+
+    @media (max-width: 479px) {
+      font-size: 12px;
+      text-align: center;
+      width: 133.594px;
+      height: 46px;
+    }
+  }
+
+  @media (max-width: 479px) {
+    gap: 10px;
+    justify-content: flex-start;
+    padding: 66px 120.313px 58px 121.094px;
+    text-align: center;
+  }
 }

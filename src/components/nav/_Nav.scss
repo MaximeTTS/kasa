@@ -14,4 +14,16 @@
       }
     }
   }
+
+  @media (max-width: 479px) {
+    ul {
+      gap: 16px;
+
+      a {
+        font-size: 12px;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+    }
+  }
 }

@@ -18,4 +18,10 @@
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
+
+  @media (max-width: 479px) {
+    padding: 0;
+    gap: 20px;
+    background-color: #ffff;
+  }
 }
