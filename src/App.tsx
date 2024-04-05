@@ -13,7 +13,7 @@ const App: FunctionComponent = () => {
       <Routes>
         <Route path='/' element={<Home />} /> {/* Route pour la page d'accueil */}
         <Route path='/about' element={<About />} /> {/* Route pour la page À Propos */}
-        <Route path='/logement' element={<Logement />} /> {/* Route pour la page Logement */}
+        <Route path='/logement/:slugId' element={<Logement />} /> {/* Route pour la page Logement */}
         <Route path='*' element={<NotFoundPage />} /> {/* Route pour les chemins non trouvés */}
       </Routes>
     </Router>
