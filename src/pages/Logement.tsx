@@ -1,7 +1,20 @@
 import React from 'react'
+import Footer from '../components/footer/Footer'
+import Header from '../components/header/Header'
+import LogementImage from '../components/logementImage/LogementImage'
 
 const Logement: React.FC = () => {
-  return <div>Contenu de la page d'accueil</div>
+  return (
+    <body>
+      <Header />
+      <main>
+        <div className='section__logement'>
+          <LogementImage />
+        </div>
+      </main>
+      <Footer />
+    </body>
+  )
 }
 
 export default Logement
