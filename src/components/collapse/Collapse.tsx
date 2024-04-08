@@ -3,7 +3,7 @@ import './_Collapse.scss'
 
 interface CollapseProps {
   title: string
-  content: string
+  content: React.ReactNode
 }
 
 const Collapse: React.FC<CollapseProps> = ({ title, content }) => {

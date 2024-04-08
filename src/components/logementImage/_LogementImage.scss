@@ -1,0 +1,15 @@
+.section__collapse {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  max-width: 1240px;
+  margin: 0 auto;
+  margin-bottom: 10em;
+
+  .collapse__container {
+    flex: 1;
+
+    max-width: calc(50% - 78px);
+  }
+}
