@@ -17,6 +17,7 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
     swipe: totalSlides > 1,
     slidesToShow: 1,
     slidesToScroll: 1,
+    draggable: false,
     beforeChange: (current: number, next: number) => setCurrentSlide(next),
   }
 

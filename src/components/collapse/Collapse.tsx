@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import './_Collapse.scss'
 
 interface CollapseProps {
   title: string

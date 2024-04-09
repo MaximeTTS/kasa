@@ -17,4 +17,11 @@
     transform: translateY(35%) rotate(-135deg);
     transition: transform 0.3s ease;
   }
+
+  @media (max-width: 479px) {
+    &::before {
+      border-width: 0 3px 3px 0;
+      padding: 6px;
+    }
+  }
 }

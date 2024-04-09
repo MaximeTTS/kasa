@@ -27,24 +27,24 @@ const renderStars = (rating: number) => {
 }
 
 const CarrouselText: React.FC<CarrouselTextProps> = ({ title, hostName, hostPicture, location, tags, rating }) => {
+  const nameWithBreak = hostName.replace(' ', '<br />')
+
   return (
     <div className='details-container'>
-      <div className='top-info'>
-        <div className='title-container'>
-          <h1 className='carrousel-title'>{title}</h1>
-        </div>
-        <div className='host-info'>
-          <div className='host-name'>{hostName}</div>
-          <img className='host-picture' src={hostPicture} alt='Host' />
-        </div>
-      </div>
-      <p className='carrousel-location'>{location}</p>
-      <div className='bottom-info'>
+      <div className='carrousel-info'>
+        <h1 className='carrousel-title'>{title}</h1>
+        <p className='carrousel-location'>{location}</p>
         <ul className='carrousel-tags'>
           {tags.map((tag, index) => (
             <li key={index}>{tag}</li>
           ))}
         </ul>
+      </div>
+      <div className='host-and-rating-container'>
+        <div className='host-info'>
+          <div className='host-name' dangerouslySetInnerHTML={{ __html: nameWithBreak }}></div>
+          <img className='host-picture' src={hostPicture} alt='Host' />
+        </div>
         <div className='carrousel-rating'>{renderStars(rating)}</div>
       </div>
     </div>
