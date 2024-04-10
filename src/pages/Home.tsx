@@ -8,12 +8,20 @@ import Header from '../components/header/Header'
 const Home: React.FC = () => {
   return (
     <>
+      <Header />
       <main>
         <BannerHome />
         <div className='gallery'>
           {logements.map((logement) => {
-            const path = `/logement/${logement.id}`
-            return <Card key={logement.id} title={logement.title} cover={logement.cover} path={path} />
+            const path = `/logement/${logement.id}` // Utiliser directement l'ID pour le chemin
+            return (
+              <Card
+                key={logement.id}
+                title={logement.title}
+                cover={logement.cover}
+                path={path} // Passer le chemin en tant que prop
+              />
+            )
           })}
         </div>
       </main>
