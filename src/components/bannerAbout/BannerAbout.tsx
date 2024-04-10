@@ -1,12 +1,9 @@
 import React from 'react'
+import Banner from '../banner/Banner'
 import banner__about from '../../img/banner/about_banner.png'
 
-const BannerAbout: React.FC = () => {
-  return (
-    <div className='banner__container'>
-      <img src={banner__about} className='banner__about' alt='Bannière page à propos' />
-    </div>
-  )
+const AboutBanner = () => {
+  return <Banner imageSrc={banner__about} altText='Bannière page à propos' className='banner__about' />
 }
 
-export default BannerAbout
+export default AboutBanner

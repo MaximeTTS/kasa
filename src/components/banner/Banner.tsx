@@ -1,11 +1,16 @@
 import React from 'react'
-import banner__home from '../../img/banner/home_banner.png'
+interface BannerProps {
+  imageSrc: string
+  altText: string
+  title?: string
+  className?: string
+}
 
-const Banner: React.FC = () => {
+const Banner: React.FC<BannerProps> = ({ imageSrc, altText, title, className = '' }) => {
   return (
-    <div className='banner__container'>
-      <img src={banner__home} className='banner__home' alt='Bannière page accueil' />
-      <h1 className='banner__title'>Chez vous, partout ailleurs</h1>
+    <div className={`banner__container ${className}`}>
+      <img src={imageSrc} className={`banner__image ${className}`} alt={altText} />
+      {title && <h1 className='banner__title'>{title}</h1>}
     </div>
   )
 }

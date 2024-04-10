@@ -1,31 +1,24 @@
 import React from 'react'
-import Banner from '../components/banner/Banner'
-import { Link } from 'react-router-dom'
+import BannerHome from '../components/bannerHome/BannerHome'
 import Card from '../components/card/Card'
 import logements from '../data/logements.json'
-import slugify from '../helpers/slugify'
 import Footer from '../components/footer/Footer'
 import Header from '../components/header/Header'
 
 const Home: React.FC = () => {
   return (
-    <body>
-      <Header />
+    <>
       <main>
-        <Banner />
+        <BannerHome />
         <div className='gallery'>
           {logements.map((logement) => {
-            const slug = slugify(logement.title)
-            return (
-              <Link to={`/logement/${slug}-${logement.id}`} key={logement.id} className='gallery__link'>
-                <Card title={logement.title} cover={logement.cover} />
-              </Link>
-            )
+            const path = `/logement/${logement.id}`
+            return <Card key={logement.id} title={logement.title} cover={logement.cover} path={path} />
           })}
         </div>
       </main>
       <Footer />
-    </body>
+    </>
   )
 }
 
