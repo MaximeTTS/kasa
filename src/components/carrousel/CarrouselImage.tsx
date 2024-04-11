@@ -1,5 +1,4 @@
-import React, { useRef, useState } from 'react'
-import Slider from 'react-slick'
+import React, { useState } from 'react'
 
 interface CarouselProps {
   images: string[]
@@ -7,42 +6,34 @@ interface CarouselProps {
 
 const Carousel: React.FC<CarouselProps> = ({ images }) => {
   const [currentSlide, setCurrentSlide] = useState(0)
-  const sliderRef = useRef<Slider>(null)
   const totalSlides = images.length
 
-  const settings = {
-    dots: false,
-    infinite: totalSlides > 1,
-    speed: 500,
-    swipe: totalSlides > 1,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    draggable: false,
-    beforeChange: (current: number, next: number) => setCurrentSlide(next),
+  const nextSlide = () => {
+    setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides)
+  }
+
+  const prevSlide = () => {
+    setCurrentSlide((prevSlide) => (prevSlide - 1 + totalSlides) % totalSlides)
   }
 
   return (
     <div className='carousel-container'>
-      {totalSlides > 1 ? (
+      {totalSlides > 1 && (
         <>
-          <button className='carousel-prev' onClick={() => sliderRef.current?.slickPrev()}>
+          <button className='carousel-prev' onClick={prevSlide}>
             <img src={require('../../img/carrousel/flech_left.png')} alt='Précédent' />
           </button>
-          <button className='carousel-next' onClick={() => sliderRef.current?.slickNext()}>
+          <button className='carousel-next' onClick={nextSlide}>
             <img src={require('../../img/carrousel/flech_right.png')} alt='Suivant' />
           </button>
           <div className='carousel-counter'>{`${currentSlide + 1} / ${totalSlides}`}</div>
         </>
-      ) : null}
-      <Slider ref={sliderRef} {...settings}>
-        {images.map((image, index) => (
-          <div key={image} className='carousel-slide'>
-            <div className='image-container'>
-              <img src={image} alt={`Image du logement ${index + 1}`} />
-            </div>
-          </div>
-        ))}
-      </Slider>
+      )}
+      <div className='carousel-slide'>
+        <div className='image-container'>
+          <img src={images[currentSlide]} alt={`Image du logement ${currentSlide + 1}`} />
+        </div>
+      </div>
     </div>
   )
 }
