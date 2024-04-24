@@ -1,6 +1,6 @@
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between !important;
   align-items: center;
   margin: auto;
   padding-top: 45px;
@@ -40,5 +40,9 @@
 
   @media (min-width: 1024px) and (max-width: 1300px) {
     margin: 0 35px;
+  }
+
+  @media (min-width: 1300px) {
+    gap: 65vh;
   }
 }
